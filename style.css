@@ -4,7 +4,7 @@
     --cor-de-fundo: #191716;
     --xanthous: #E6AF2E;
     --azulTek: #3D348B;
-    --branco: #FFFFFF;
+    --branco: #d8e0cc;
     --botao-ativo: #8BBEB2;
     --botao-ativo: #1E2019;
 
@@ -73,7 +73,7 @@ body {
     text-align: center;
     min-width: 100px;
 }
-.cotnador-digito-numero {
+.contador-digito-numero {
     font-size: 80px;
     margin: 0;
 }
