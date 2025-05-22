@@ -1,27 +1,24 @@
 const botoes = document.querySelectorAll(".botao");
-const abasConteudo = document.querySelectorAll(".aba-conteudo");
+const textos = document.querySelectorAll(".aba-conteudo");
 
 for (let i = 0; i < botoes.length; i++) {
     botoes[i].onclick = function () {
-        // Remove a classe 'ativo' de todos os botões
+
         for (let j = 0; j < botoes.length; j++) {
             botoes[j].classList.remove("ativo");
-            botoes[j].classList.remove("botaoCor");
-            abasConteudo[j].classList.remove("ativo"); // Esconde todas as abas
+            textos[j].classList.remove("ativo");
         }
-        
-        // Adiciona a classe 'ativo' ao botão clicado
+
         botoes[i].classList.add("ativo");
-        botoes[i].classList.add("botaoCor");
-        abasConteudo[i].classList.add("ativo"); // Mostra a aba correspondente
+        textos[i].classList.add("ativo");
     }
 }
 
 const contadores = document.querySelectorAll(".contador");
-const tempoObjetivo1 = new Date("2025-10-05T00:00:00");
-const tempoObjetivo2 = new Date("2025-10-05T00:00:00");
-const tempoObjetivo3 = new Date("2025-10-05T00:00:00");
-const tempoObjetivo4 = new Date("2026-01-01T00:00:00");
+const tempoObjetivo1 = new Date("2025-06-05T00:00:00");
+const tempoObjetivo2 = new Date("2025-12-31T00:00:00");
+const tempoObjetivo3 = new Date("2025-12-31T00:00:00");
+const tempoObjetivo4 = new Date("2026-08-01T00:00:00");
 
 const tempos = [tempoObjetivo1, tempoObjetivo2, tempoObjetivo3, tempoObjetivo4];
 
@@ -46,11 +43,11 @@ function calculaTempo(tempoObjetivo){
 }
 
 function atualizaCronometro(){
-    for (let i=0; i<contadores.length; i++){
-        document.getElementById("dias"+i).textContent = calculaTempo(tempos[i])[0];
-        document.getElementById("horas"+i).textContent = calculaTempo(tempos[i])[1];
-        document.getElementById("min"+i).textContent = calculaTempo(tempos[i])[2];
-        document.getElementById("seg"+i).textContent = calculaTempo(tempos[i])[3];
+    for (let i = 0; i < contadores.length; i++) {
+        document.getElementById("dias" + i).textContent = calculaTempo(tempos[i])[0];
+        document.getElementById("horas" + i).textContent = calculaTempo(tempos[i])[1];
+        document.getElementById("min" + i).textContent = calculaTempo(tempos[i])[2];
+        document.getElementById("seg"+ i ).textContent = calculaTempo(tempos[i])[3];
     }
 }
 function comecaCronometro(){
