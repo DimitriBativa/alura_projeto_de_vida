@@ -99,13 +99,8 @@ body {
 .botao.ativo {
     background-color: var(--botao-ativo);
     border-bottom: 4px solid var(--xanthous);
-}
-
-
-.botaoCor {
     border-top: 4px solid var(--azulTek);
 }
-
 
 .abas-textos {
     background: var(--texto-fundo);
